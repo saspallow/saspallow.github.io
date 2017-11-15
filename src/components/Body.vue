@@ -17,8 +17,8 @@
                   </figure>
                 </div>
                 <div class="media-content">
-                  <p class="title is-4 has-text-grey">John Smith</p>
-                  <p class="subtitle is-6 has-text-grey">@johnsmith</p>
+                  <p class="title is-4 has-text-grey">Name</p>
+                  <p class="subtitle is-6 has-text-grey">2016 - 2017</p>
                 </div>
               </div>
 
@@ -30,6 +30,7 @@
                 <br>
                 <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
               </div>
+                <a href="#">#Tools</a>
             </div>
           </div>
         </div>
