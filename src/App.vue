@@ -10,5 +10,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="sass">
+@import "~bulma"
+@import "~bulma-timeline"
+@import "~bulma-divider/divider"
 </style>
