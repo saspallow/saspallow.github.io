@@ -2,13 +2,17 @@
     <footer class="footer notification is-info">
       <div class="container">
         <div class="columns">
-          <div class="column is-3">
-            <span class="icon has-text-warning">
+          <div class="column is-6">
+            <!-- <span class="icon has-text-warning">
               <i class="fa fa-heartbeat" aria-hidden="true"></i>
-            </span>Surasak Phothiphiphit
-          </div>
-          <div class="column is-3">
-            
+            </span>Surasak Phothiphiphit -->
+            <span class="is-large">
+              <span class="fa-stack fa-lg">
+                <img class="fa fa-camera fa-stack-1x" src="/static/svg-loaders/puff.svg"/>
+                <i class="fa fa-heartbeat fa-stack-1x has-text-warning" aria-hidden="true"></i>
+              </span>
+            </span>
+            <span>Surasak Phothiphiphit</span>
           </div>
           <div class="column is-3">
 
