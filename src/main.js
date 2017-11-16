@@ -4,8 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VModal from 'vue-js-modal'
+import VueProgressBar from 'vue-progressbar'
+
+const options = {
+  thickness: '3px',
+  color: 'rgb(115, 220, 255)',
+  failedColor: 'red',
+  height: '2px'
+}
 
 Vue.use(VModal)
+Vue.use(VueProgressBar, options)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
