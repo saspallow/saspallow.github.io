@@ -10,10 +10,7 @@
           <div class="container">
 
             <div class="navbar-brand">
-              <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" alt="Surasak Phothiphiphit" width="112" height="28">
-                <!-- <img src="/static/logo.png" alt="Surasak Phothiphiphit" width="150" height="35"> -->
-              </a>
+              <strong> <a @click="show()" :class="`has-text-${isClicked ? 'danger' : 'light'}`">ME</a></strong>
             </div>
 
             <div id="navMenuDocumentation" class="navbar-menu">
@@ -44,5 +41,68 @@
         </nav>
       </section>
     </div>
+    
+    <modal name="modal-me"
+    :width="128"
+    :height="128"
+    :delay="20"
+    :draggable="true"
+    :pivotX="0.02"
+    :pivotY="0.05"
+    @before-open="beforeOpen"
+    @before-close="beforeClose"
+    classes="img-circle"
+    >
+      <!-- <figure class="image is-128x128"> -->
+        <img src="/static/myAvatar.svg">
+      <!-- </figure> -->
+    </modal>
   </div>
 </template>
+
+<style>
+.img-circle {
+    background-color: transparent;
+    border-radius: 100%;
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,.4);
+    border: 1px solid hsla(0,0%,100%,.65);
+}
+.v--modal-overlay {
+    position: fixed;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    opacity: 1;
+}
+.v--modal-overlay .v--modal-box {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+</style>
+
+<script>
+export default {
+  data: () => ({
+    isClicked: false
+  }),
+  methods: {
+    show () {
+      this.$modal.show('modal-me')
+    },
+    hide () {
+      this.$modal.hide('modal-me')
+    },
+    beforeOpen () {
+      this.isClicked = !this.isClicked
+    },
+    beforeClose () {
+      this.isClicked = !this.isClicked
+    }
+  }
+}
+</script>
