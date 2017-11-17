@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img :src="item.fullImage" alt="Placeholder image">
+                <img v-img :src="item.fullImage">
               </figure>
             </div>
             <div class="card-content">
@@ -17,19 +17,47 @@
                   </figure>
                 </div>
                 <div class="media-content">
-                  <p class="title is-4 has-text-grey">{{ item.name }}</p>
-                  <p class="subtitle is-6 has-text-grey">{{ item.date }}</p>
+                  <p class="title is-4 has-text-grey">{{ item.title }}</p>
+                  <p class="subtitle is-6 has-text-grey">{{ item.subTitle }}</p>
                 </div>
               </div>
 
               <div class="content" v-html="item.description">
               </div>
-                <a href="#">#Tools</a>
             </div>
           </div>
         </div>
       </div>
+
       <div class="is-divider" data-content="&"></div>
+      
+      <div class="columns">
+        <div class="column is-4" v-for="(item, key) in items2" :key="key">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img v-img :src="item.fullImage">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img :src="item.thumbnailImage" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4 has-text-grey">{{ item.title }}</p>
+                  <p class="subtitle is-6 has-text-grey">{{ item.subTitle }}</p>
+                </div>
+              </div>
+
+              <div class="content" v-html="item.description">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -39,46 +67,53 @@ export default {
   data: () => ({
     items: [
       {
-        name: 'Name 1',
-        date: '2016 - 2017',
-        fullImage: 'https://bulma.io/images/placeholders/1280x960.png',
-        thumbnailImage: 'https://bulma.io/images/placeholders/96x96.png',
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                <a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>`,
+        title: 'Stock Charts',
+        subTitle: 'With Tradingview',
+        fullImage: '/static/projects/tv.PNG',
+        thumbnailImage: '/static/projects/tv_tn.jpg',
+        description: `Stock Charts Integration With HitradeX.`,
         tools: [
           'T1'
         ]
       },
       {
-        name: 'Name 1',
-        date: '2016 - 2017',
-        fullImage: 'https://bulma.io/images/placeholders/1280x960.png',
-        thumbnailImage: 'https://bulma.io/images/placeholders/96x96.png',
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                <a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>`,
+        title: 'HitradeX',
+        subTitle: 'Stock Trading',
+        fullImage: '/static/projects/hx.PNG',
+        thumbnailImage: '/static/projects/hx_tn.jpg',
+        description: `Application For Stock Trading.`,
         tools: [
           'T1'
         ]
       },
       {
-        name: 'Name 1',
-        date: '2016 - 2017',
-        fullImage: 'https://bulma.io/images/placeholders/1280x960.png',
-        thumbnailImage: 'https://bulma.io/images/placeholders/96x96.png',
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                <a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>`,
+        title: 'Event Logs',
+        subTitle: 'Dell EMC',
+        fullImage: '/static/projects/eventlogs.PNG',
+        thumbnailImage: '/static/projects/eventlogs_tn.jpg',
+        description: `Application for registration, Keep logs of attendees.`,
+        tools: [
+          'T1'
+        ]
+      }
+    ],
+    items2: [
+      {
+        title: 'CHANCHAI ENGINEERING',
+        subTitle: '& EQUIPMENT Co.,Ltd.',
+        fullImage: '/static/projects/cce.PNG',
+        thumbnailImage: '/static/projects/cce_tn.jpg',
+        description: `Application for Sell&Products Management Online.`,
+        tools: [
+          'T1'
+        ]
+      },
+      {
+        title: 'Mitrphol Inventory',
+        subTitle: 'Inventory Management OF IT ASSETS',
+        fullImage: '/static/projects/mitrphol.PNG',
+        thumbnailImage: '/static/projects/mitrphol_tn.jpg',
+        description: `Application for Inventory Management.`,
         tools: [
           'T1'
         ]
