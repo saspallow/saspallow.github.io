@@ -89,7 +89,7 @@ export default {
       {
         title: 'Event Logs',
         subTitle: 'Dell EMC',
-        fullImage: '/static/projects/eventlogs.PNG',
+        fullImage: 'https://raw.githubusercontent.com/saspallow/saspallow.github.io/master/static/projects/eventlogs.png',
         thumbnailImage: '/static/projects/eventlogs_tn.jpg',
         description: `Application for registration, Keep logs of attendees.`,
         tools: [
@@ -101,7 +101,7 @@ export default {
       {
         title: 'CHANCHAI ENGINEERING',
         subTitle: '& EQUIPMENT Co.,Ltd.',
-        fullImage: '/static/projects/cce.PNG',
+        fullImage: 'https://raw.githubusercontent.com/saspallow/saspallow.github.io/master/static/projects/cce.png',
         thumbnailImage: '/static/projects/cce_tn.jpg',
         description: `Application for Sell&Products Management Online.`,
         tools: [
@@ -111,7 +111,7 @@ export default {
       {
         title: 'Mitrphol Inventory',
         subTitle: 'Inventory Management OF IT ASSETS',
-        fullImage: '/static/projects/mitrphol.PNG',
+        fullImage: 'https://raw.githubusercontent.com/saspallow/saspallow.github.io/master/static/projects/mitrphol.png',
         thumbnailImage: '/static/projects/mitrphol_tn.jpg',
         description: `Application for Inventory Management.`,
         tools: [
