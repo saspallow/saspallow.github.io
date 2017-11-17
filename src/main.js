@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import VModal from 'vue-js-modal'
 import VueProgressBar from 'vue-progressbar'
+import VueImg from 'v-img'
 
 const options = {
   thickness: '3px',
@@ -15,6 +16,7 @@ const options = {
 
 Vue.use(VModal)
 Vue.use(VueProgressBar, options)
+Vue.use(VueImg)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
